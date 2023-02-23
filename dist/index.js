@@ -205,10 +205,10 @@ var ButtonCSS = core.css({
         },
         border: {
             a2: {
-                borderRadius: '1rem',
+                borderRadius: '0.6rem',
             },
             a1: {
-                borderRadius: '2rem',
+                borderRadius: '1.5rem',
             },
             a3: {
                 borderRadius: '3rem',

@@ -23,7 +23,7 @@ const ButtonCSS = css({
     },
     border: {
       a2: {
-        borderRadius: '0.750rem',
+        borderRadius: '0.6rem',
       },
       a1: {
         borderRadius: '1.5rem',
