@@ -1,11 +1,11 @@
 import { blackA } from '@radix-ui/colors'
 import { css } from '@stitches/core'
-import { styled } from '@stitches/react'
-import { ComponentProps, ReactElement, ForwardedRef, ElementRef } from 'react'
-import type * as Stitches from '@stitches/react'
-import React from 'react'
+import { ComponentProps, ReactElement, RefObject } from 'react'
+import * as Stitches from '@stitches/react'
+import * as React from 'react'
+import { styled, CSS } from './stitches.config'
 
-const button = css({
+const ButtonCSS = css({
   variants: {
     size: {
       small: {
@@ -22,11 +22,14 @@ const button = css({
       },
     },
     border: {
-      a1: {
-        borderRadius: '16px',
-      },
       a2: {
-        borderRadius: '6px',
+        borderRadius: '1rem',
+      },
+      a1: {
+        borderRadius: '2rem',
+      },
+      a3: {
+        borderRadius: '3rem',
       },
     },
     color: {
@@ -38,6 +41,7 @@ const button = css({
         },
       },
       violet: {
+        border: 0,
         backgroundColor: 'blueviolet',
         color: 'white',
         '&:hover': {
@@ -45,6 +49,7 @@ const button = css({
         },
       },
       gray: {
+        border: 0,
         backgroundColor: 'gainsboro',
         '&:hover': {
           backgroundColor: 'lightgray',
@@ -59,29 +64,31 @@ const button = css({
   },
 })
 
-const ButtonCSS = styled('button', button)
+const ButtonStyled = styled('button', ButtonCSS)
 
 type StyledButtonVariants = Stitches.VariantProps<typeof ButtonCSS>
+type ButtonPropsPrimitive = React.ComponentProps<typeof ButtonStyled>;
+type ButtonPrimitiveProps = ButtonPropsPrimitive & { css?: CSS };
 
-export type ButtonProps = StyledButtonVariants &
-  ComponentProps<typeof ButtonCSS> & {
+export type ButtonProps = ComponentProps<typeof ButtonStyled> & {
     leftIcon?: ReactElement
     rightIcon?: ReactElement
     border?: StyledButtonVariants
     size?: StyledButtonVariants
+    color?: StyledButtonVariants
   }  
 
-function Button(
-  { children, leftIcon, rightIcon, ...props }: ButtonProps,
-  ref: ForwardedRef<ElementRef<typeof ButtonCSS>>,
-) {
-  return (
-    <ButtonCSS ref={ref} {...props}>
-      {children}'ola'
-    </ButtonCSS>
-  )
-}
+export const ButtonNk = React.forwardRef<
+  React.ElementRef<typeof ButtonStyled>,
+  ButtonPrimitiveProps
+>(({ children, ...props }: any, forwardedRef: ((instance: HTMLButtonElement | null) => void) | RefObject<HTMLButtonElement> | null | undefined) => (
+ 
+    <ButtonStyled {...props} ref={forwardedRef}>
+      {children}
+    </ButtonStyled>
 
-export default Button
+));
 
-Button.displayName = 'Button'
+export default ButtonNk
+
+ButtonNk.displayName = 'Button'

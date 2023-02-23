@@ -1,32 +1,58 @@
 {
-  "name": "@nika-ui/react",
-  "version": "1.0.0",
-  "description": "biblioteca de componentes react estilizados",
-  "source": "src/index.ts",
-  "main": "dist/main.js",
+  "name": "nika-styles",
+  "version": "1.1.14",
+  "description": "",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+ ],
   "scripts": {
-    "types": "dist/index.d.ts",
-    "dev": "parcel ./src/index.html",
-    "start": "parcel watch",
-    "build": "parcel build src/index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ds:build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "dev": "parcel src/index.html"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diotto6/nika-ui.git"
+  },
+  "keywords": [],
+  "author": "Diotto dev",
   "license": "MIT",
-  "devDependencies": {
-    "@parcel/transformer-typescript-tsc": "^2.8.3",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@types/typescript": "^2.0.0",
-    "parcel": "^2.8.3",
-    "process": "^0.11.10",
-    "typescript": "^4.9.5"
+  "bugs": {
+    "url": "https://github.com/Diotto6/nika-ui/issues"
+  },
+  "homepage": "https://github.com/Diotto6/nika-ui#readme",
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@stitches/core": "^1.2.8",
     "@stitches/react": "^1.2.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "acorn-jsx": "^5.3.2",
+    "parcel": "^2.8.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "styled-components": "^5.3.6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/node": "^8.2.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "nodemon": "^2.0.20",
+    "process": "^0.11.10",
+    "rollup-plugin-sass": "^1.12.17",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.5"
   }
 }
