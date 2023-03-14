@@ -25,6 +25,9 @@ Execute este comando em seu projeto react:
  
   <img height="150px" src="https://raw.githubusercontent.com/Diotto6/nika-ui/master/assets/utilização.jpg"/>
   
+  ## Renderização no lado do cliente
+  
+  <img height="150px" src="https://raw.githubusercontent.com/Diotto6/nika-ui/master/assets/button.jpg"/>
   
   # Obs
   
