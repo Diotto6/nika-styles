@@ -796,5 +796,5 @@ export type ButtonProps = ComponentProps<typeof ButtonStyled> & {
     size?: StyledButtonVariants;
     color?: StyledButtonVariants;
 };
-export declare const ButtonNk: React.ForwardRefExoticComponent<Omit<ButtonPrimitiveProps, "ref"> & React.RefAttributes<HTMLButtonElement>>;
-export default ButtonNk;
+export declare const ButtonNika: React.ForwardRefExoticComponent<Omit<ButtonPrimitiveProps, "ref"> & React.RefAttributes<HTMLButtonElement>>;
+export default ButtonNika;

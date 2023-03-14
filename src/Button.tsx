@@ -78,7 +78,7 @@ export type ButtonProps = ComponentProps<typeof ButtonStyled> & {
     color?: StyledButtonVariants
   }  
 
-export const ButtonNk = React.forwardRef<
+export const ButtonNika = React.forwardRef<
   React.ElementRef<typeof ButtonStyled>,
   ButtonPrimitiveProps
 >(({ children, ...props }: any, forwardedRef: ((instance: HTMLButtonElement | null) => void) | RefObject<HTMLButtonElement> | null | undefined) => (
@@ -89,6 +89,6 @@ export const ButtonNk = React.forwardRef<
 
 ));
 
-export default ButtonNk
+export default ButtonNika
 
-ButtonNk.displayName = 'Button'
+ButtonNika.displayName = 'Button'

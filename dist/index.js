@@ -13,9 +13,9 @@ function ___$insertStyle(css) {
 
 Object.defineProperty(exports, '__esModule', { value: true });
 
+var React = require('react');
 var colors = require('@radix-ui/colors');
 var core = require('@stitches/core');
-var React = require('react');
 var react = require('@stitches/react');
 
 function _interopNamespace(e) {
@@ -246,12 +246,16 @@ var ButtonCSS = core.css({
     },
 });
 var ButtonStyled = styled('button', ButtonCSS);
-var ButtonNk = React__namespace.forwardRef(function (_a, forwardedRef) {
+var ButtonNika = React__namespace.forwardRef(function (_a, forwardedRef) {
     var children = _a.children, props = __rest(_a, ["children"]);
     return (React__namespace.createElement(ButtonStyled, __assign({}, props, { ref: forwardedRef }), children));
 });
-ButtonNk.displayName = 'Button';
+ButtonNika.displayName = 'Button';
 
-exports.ButtonNk = ButtonNk;
+function Button(props) {
+    return React__namespace.createElement(ButtonNika, __assign({}, props), props.children);
+}
+
+exports.Button = Button;
 exports.darkTheme = darkTheme;
 //# sourceMappingURL=index.js.map
