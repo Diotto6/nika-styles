@@ -21,8 +21,5 @@ Execute este comando em seu projeto react:
   
   ## Renderização no lado do cliente
   
-  <img height="150px" src="https://raw.githubusercontent.com/Diotto6/nika-ui/master/assets/button.jpg"/>
-  
-  # Obs
-  
-  Estilizações não se aplicam via `SSR`
+  <img height="150px" src="https://raw.githubusercontent.com/Diotto6/nika-ui/master/assets/buttonImage.jpg"/>
+
