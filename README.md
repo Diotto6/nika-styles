@@ -42,8 +42,10 @@ export default function Home() {
   
   ## Renderização no lado do cliente
   
-  <iframe src="https://br.freepik.com/fotos-gratis/terra-e-galaxia-elementos-desta-imagem-fornecidos-pela-nasa_13180419.htm#query=planeta&position=0&from_view=keyword&track=sph" width="500" height="300"></iframe>
+ ![Captura de Tela](iframe.jpg)
   
-  <img height="150px" src="https://raw.githubusercontent.com/Diotto6/nika-ui/master/assets/buttonImage.jpg"/>
+ ou acesse o link
+ 
+ [Acessar o Conteúdo](https://nika-example-util.vercel.app/)
   
  
